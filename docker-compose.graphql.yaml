@@ -3,15 +3,17 @@
 services:
   addon-template:
     container_name: ddev-${DDEV_SITENAME}-addon-template
-    image: busybox:stable
-    command: tail -f /dev/null
+    build: graphql
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: production
     networks: [default, ddev_default]
     restart: "no"
     # These labels ensure this service is discoverable by ddev.
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT
-
     volumes:
     - ".:/mnt/ddev_config"
     - "ddev-global-cache:/mnt/ddev-global-cache"
