@@ -14,6 +14,9 @@ setup() {
 health_checks() {
   # Do something useful here that verifies the add-on
   # ddev exec "curl -s elasticsearch:9200" | grep "${PROJNAME}-elasticsearch"
+  ddev logs -s graphql-book
+  docker logs ddev-test-graphql-graphql-book
+  docker inspect --format "{{ json .State.Health }}" ddev-test-graphql-graphql-book | docker run -i --rm ddev/ddev-utilities jq -r
   ddev exec "curl -s https://localhost:443/"
 }
 
