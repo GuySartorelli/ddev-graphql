@@ -1,7 +1,7 @@
 services:
-  graphql:
-    container_name: ddev-${DDEV_SITENAME}-graphql
-    build: graphql
+  graphql-book:
+    container_name: ddev-${DDEV_SITENAME}-graphql-book
+    build: graphql/book
     environment:
       NODE_ENV: production
       VIRTUAL_HOST: $DDEV_HOSTNAME

@@ -1,4 +1,4 @@
-# GraphQL AI
+# GraphQL Book
 
 This project is a simple GraphQL server using Apollo Server and TypeScript.
 
@@ -24,8 +24,8 @@ graphql-ai/
 
 1. Clone the repository:
     ```sh
-    git clone git@gitlab.com:software-hideout/graphql-ai.git
-    cd graphql-ai
+    git clone git@github.com:machine-rc/ddev-graphql.git
+    cd ddev-graphql
     ```
 
 2. Initialize npm and set type to module:
@@ -57,9 +57,9 @@ graphql-ai/
 ### Docker
 To build and run the Docker container, run the following commands:
 ```sh
-cd graphql-ai
-docker build -t graphql-ai .
-docker run -p 4000:4000 graphql-ai
+cd ddev-graphql
+docker build -t ddev-graphql .
+docker run -p 4000:4000 ddev-graphql
 #Or use docker-compose:
 docker-compose up
 ```
