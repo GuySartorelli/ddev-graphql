@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Copy all files to the container
 COPY . .
-RUN npm install
+RUN npm install && npm run compile
 
 # Expose the port the app runs on
 EXPOSE 4000
