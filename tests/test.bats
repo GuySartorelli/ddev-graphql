@@ -12,6 +12,9 @@ setup() {
 }
 
 health_checks() {
+  # wait for services to start
+  sleep 30
+
   # Do something useful here that verifies the add-on
   # ddev exec "curl -s elasticsearch:9200" | grep "${PROJNAME}-elasticsearch"
   ddev logs -s graphql-book
