@@ -4,14 +4,26 @@
 
 ## Getting started
 
-In the DDEV project directory launch the command:
+In the DDEV project directory:
+
+For DDEV v1.23.5 or above run
+
+```sh
+ddev add-on get machine-rc/graphql
+```
+
+For earlier versions of DDEV run
+
 ```sh
 ddev get machine-rc/graphql
 ```
+
 Restart the DDEV instance:
+
 ```sh
 ddev restart
 ```
+
 Open the Grafana web interface via the url: https://your-project-name.ddev.site:4000/
 
 ## Customizations
